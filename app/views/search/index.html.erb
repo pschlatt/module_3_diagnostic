@@ -1,5 +1,8 @@
 <% search.stations.map do |station| %>
   <ul>Station: <%= station.name  %>
-
+    <li class="fuel_types">Fuel_types: <%= station.fuel_types %></li>
+    <li class="distance">Distance: <%= station.distance %> miles</li>
+    <li class="access_times">Access Times: <%= station.access_times %></li>
+    <li class="address">Address: <%= station.address %></li>
   </ul>
 <% end %>

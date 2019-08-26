@@ -8,11 +8,10 @@ RSpec.describe "User" do
     click_on "Locate"
     expect(current_path).to eq(search_path)
     expect(page).to have_content("Station:", count: 10)
-    expect(page).to have_content("Name:", count: 10)
-    expect(page).to have_content("Fuel Types:", count: 10)
-    expect(page).to have_content("Distance:", count: 10)
-    expect(page).to have_content("Access Times:", count: 10)
-    expect(page).to have_content("Address:", count: 10)
+    expect(page).to have_css(".fuel_types", count: 10)
+    expect(page).to have_css(".distance", count: 10)
+    expect(page).to have_css(".access_times", count: 10)
+    expect(page).to have_css(".address", count: 10)
   end
 end
 
