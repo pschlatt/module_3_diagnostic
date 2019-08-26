@@ -6,7 +6,7 @@ RSpec.describe "User" do
 
     fill_in :q, with: "80203"
     click_on "Locate"
-    expect(current_page).to eq(search_path)
+    expect(current_path).to eq(search_path)
     expect(page).to have_content("Station:", count: 10)
     expect(page).to have_content("Name:", count: 10)
     expect(page).to have_content("Fuel Types:", count: 10)
